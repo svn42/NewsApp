@@ -1,7 +1,5 @@
 <resources>
     <string name="app_name">Sport News</string>
-    <string name="no_internet">No internet connection.</string>
-    <string name="no_news">No news found.</string>
-    <string name="no_author">No Author found.</string>
-
+    <string name="no_internet">No internet connection :(</string>
+    <string name="no_news">No news found :(</string>
 </resources>

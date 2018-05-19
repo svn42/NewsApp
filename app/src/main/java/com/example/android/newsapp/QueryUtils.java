@@ -23,10 +23,6 @@ import java.util.List;
 public class QueryUtils {
     /** Tag for the log messages */
     private static final String LOG_TAG = QueryUtils.class.getSimpleName();
-    private Context context;
-    Resources res = context.getResources();
-    String noNewsAuthor = res.getString(R.string.no_news);
-
 
     private QueryUtils() {
     }
@@ -125,9 +121,13 @@ public class QueryUtils {
                 String newsTitle = currentNewsJSONObject.getString("webTitle");
                 String newsCategory = currentNewsJSONObject.getString("sectionName");
                 String date = currentNewsJSONObject.getString("webPublicationDate");
+
+
+
                 String url = currentNewsJSONObject.getString("webUrl");
                 Log.v(LOG_TAG,newsTitle);
                 String newsAuthor ="";
+                //if there is no tags array, the author string is empty and thus not displayed
                 if (currentNewsJSONObject.has("tags")) {
                     JSONArray tagsArray = currentNewsJSONObject.getJSONArray("tags");
                     for (int j = 0; j < tagsArray.length(); j++) {
@@ -135,12 +135,8 @@ public class QueryUtils {
                         //the Value in in webTitle seems to be the complete name, so I don't need to use firstName and secondName
                          newsAuthor = tags.getString("webTitle");
                     }
-                } else {
-                     newsAuthor = "Unknown author";
                 }
-
                 News news = new News(newsCategory,newsAuthor,newsTitle,date,url);
-
                 newsList.add(news);
             }
 
