@@ -1,6 +1,7 @@
 package com.example.android.newsapp;
 
 import android.content.Context;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -15,6 +16,7 @@ public class NewsAdapter extends ArrayAdapter<News> {
 
     private static final String Date_SEPARATOR = "T";
     private static final String TimeAppendix = "Z";
+    private static final String LOG_TAG = NewsAdapter.class.getSimpleName();
 
 
     public NewsAdapter(Context context, List<News> newsList) {
@@ -53,9 +55,11 @@ public class NewsAdapter extends ArrayAdapter<News> {
         if (date.contains(Date_SEPARATOR)) {
             String[] parts = date.split(Date_SEPARATOR);
             day = parts[0];
-            time  = parts[0];
+            time  = parts[1];
+
             if (time.contains(TimeAppendix)){
-                time = parts[0];
+                String[] timeParts = time.split(TimeAppendix);
+                time = timeParts[0];
             }
         }
 

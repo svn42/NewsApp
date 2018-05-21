@@ -2,4 +2,36 @@
     <string name="app_name">Sport News</string>
     <string name="no_internet">No internet connection :(</string>
     <string name="no_news">No news found :(</string>
+    <string name="settings_menu_item">Settings</string>
+    <string name="settings_title">NewsApp Settings</string>
+
+    <string name="settings_order_by_label">Order By</string>
+    <string name="settings_order_by_key" translatable="false">order_by</string>
+    <string name="settings_order_by_default" translatable="false">@string/settings_order_by_most_recent_value</string>
+
+    <string name="settings_number_of_items_key" translatable="false">items_displayed</string>
+    <string name="settings_number_of_items_default" translatable="false">10</string>
+    <string name="settings_number_of_items_label">Number of Displayed Items (1 to 50)</string>
+    <string name="settings_number_of_items_value" translatable="false">itemsDisplayed</string>
+
+    <string name="settings_type_label">Type of Publication</string>
+    <string name="settings_type_key" translatable="false">type</string>
+    <string name="settings_type_default" translatable="false">@string/settings_type_all_value</string>
+
+    <string name="settings_type_all_label">All Types</string>
+    <string name="settings_type_all_value" translatable="false">all</string>
+    <string name="settings_type_article_label">Articles</string>
+    <string name="settings_type_article_value" translatable="false">article</string>
+    <string name="settings_type_liveblog_label">Live Blogs</string>
+    <string name="settings_type_liveblog_value" translatable="false">liveblog</string>
+    <string name="settings_type_video_label">Videos</string>
+    <string name="settings_type_video_value" translatable="false">video</string>
+
+
+    <string name="settings_order_by_most_recent_label">Newest</string>
+    <string name="settings_order_by_most_recent_value" translatable="false">newest</string>
+    <string name="settings_order_by_oldest_label">Oldest</string>
+    <string name="settings_order_by_oldest_value" translatable="false">oldest</string>
+
+
 </resources>
